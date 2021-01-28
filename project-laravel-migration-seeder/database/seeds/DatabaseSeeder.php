@@ -13,7 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             BrandSeeder::class,
-            OfficeSeeder::class
+            OfficeSeeder::class,
+            WorkerSeeder::class
         ]);
     }
 }
