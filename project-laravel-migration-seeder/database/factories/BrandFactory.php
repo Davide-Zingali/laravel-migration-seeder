@@ -9,6 +9,6 @@ $factory->define(Brand::class, function (Faker $faker) {
     return [
         'name' => ($faker -> name),
         'logo' => ($faker -> url),
-        'numberOffice' => ($faker -> randomNumber)
+        'numberOffice' => ($faker -> randomDigit)
     ];
 });
