@@ -16,4 +16,12 @@ class brandController extends Controller
 
         return view('pages.brand-page', compact('brandArray'));
     }
+
+    public function show($id) {
+
+        $brandSingle = Brand::findOrFail($id);
+        // dd($officeSingle);
+        return view('pages.single-brand-page', compact('brandSingle'));
+
+    }
 }

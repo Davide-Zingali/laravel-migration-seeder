@@ -6,16 +6,16 @@
         <h2>
             MAIN-BRAND
         </h2>
-        <ul>
+        <ol>
             @foreach ($brandArray as $item)
                 <li>
-                    Nome: {{$item -> name}} <br>
-                    Indirizzo: {{$item -> logo}} <br>
-                    Numero dipendenti: {{$item -> numberOffice}}
+                    <a href="{{route('brand-show', $item -> id)}}">
+                        Name: {{$item -> name}}
+                    </a>
                 </li>
                 <br>
             @endforeach
-        </ul>
+        </ol>
     </main>
 
 @endsection
