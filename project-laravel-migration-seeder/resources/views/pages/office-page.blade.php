@@ -9,9 +9,9 @@
         <ol>
             @foreach ($officeArray as $item)
                 <li>
-                    Nome: {{$item -> name}} <br>
-                    Indirizzo: {{$item -> address}} <br>
-                    Numero dipendenti: {{$item -> numberDependent}}
+                    <a href="{{route('office-show', $item -> id)}}">
+                        Nome: {{$item -> name}}
+                    </a>
                 </li>
                 <br>
             @endforeach

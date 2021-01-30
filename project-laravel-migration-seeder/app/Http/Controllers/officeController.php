@@ -16,4 +16,12 @@ class officeController extends Controller
 
         return view('pages.office-page', compact('officeArray'));
     }
+
+    public function show($id) {
+
+        $officeSingle = Office::findOrFail($id);
+        // dd($officeSingle);
+        return view('pages.single-office-page', compact('officeSingle'));
+
+    }
 }
